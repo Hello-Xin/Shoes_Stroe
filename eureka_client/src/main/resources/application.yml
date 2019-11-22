@@ -1,0 +1,13 @@
+server:
+  port: 8762
+#更改端口号，多实例启动
+
+spring:
+  application:
+    name: Eureka-Client
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
