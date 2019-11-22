@@ -69,13 +69,13 @@
         - 熔断验证成功
 ---
 
-### store_user  [ribbon(负载均衡)\Hystrix(熔断)]
+### store_car  [ribbon(负载均衡)\Hystrix(熔断)]
 - 端口：8766
 
 #### 功能验证
 - 启动 eureka_server
 - 启动两个 eureka_client
-- 启动 store_user
+- 启动 store_car
     - ribbon
         - 浏览器访问 localhost:8766/index.page?name=nandu
         - 浏览器依次显示 hello nandu ,port:8762\hello nandu ,port:8763
@@ -83,7 +83,7 @@
     - Hystrix
         - 关闭已经启动的client
         - 浏览器访问 localhost:8766/index.page?name=nandu
-        - hello，nandu,sorry,UserService Error
+        - hello，nandu,sorry,CarService Error
         - 熔断验证成功
 ---
 ## 总结
